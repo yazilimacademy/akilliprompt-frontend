@@ -12,14 +12,20 @@ function Index() {
         className="hero__container max-w-5xl px-5 lg:px-10 mx-auto flex flex-col gap-y-10 items-center justify-between py-10 lg:py-24">
         <div className="hero-content flex items-center justify-center flex-col gap-y-3.5 w-full">
           <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl relative font-black max-w- md:max-w-2xl lg:max-w-3xl mx-auto text-center text-zinc-800">
-                        Ready to take your business to the next level?
+          {/* Her ihtiyacınıza uygun akıllı promptlar burada! */}
+          {/* ​Yazmaya çalıştığın prompt’un daha iyisi çoktan yazıldı. */}
+          Daha iyi prompt&apos;lar,
+          <br></br>
+          daha iyi sonuçlar.
           </h2>
           <p className="font-medium text-center lg:text-left max-w-xs mx-auto lg:max-w-full text-base lg:text-lg">
-                        We&apos;ll work with you to identify opportunities for growth
+          {/* ​Yazmaya çalıştığın prompt’un daha iyisi çoktan yazıldı. */}
+          {/* Her ihtiyacına uygun akıllı promptlar! */}
+          En iyi prompt&apos;lar artık tek bir yerde.
           </p>
           <button
             className="bg-primary w-1/2 hover:shadow-lg border border-transparent hover:drop-shadow transition duration-200 lg:w-1/3 text-background font-semibold text-sm lg:text-base rounded px-4 py-2">
-                        Register for free
+                        Hemen topluluğumuza katıl!
           </button>
           <div className="pt-5 flex items-center jus flex-col gap-y-2 relative">
             <div className="absolute -left-5 top-10">
@@ -27,7 +33,7 @@ function Index() {
             </div>
             <Image src="/hero-user-face.jpg" alt="hero user faces" width={200} height={200}/>
             <p className="font-medium text-slate-500/80">
-                            Some amazing people who joined us
+                            En son topluluğumuza katılan harika insanlar
             </p>
           </div>
         </div>

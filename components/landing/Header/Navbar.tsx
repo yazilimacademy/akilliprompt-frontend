@@ -72,12 +72,12 @@ function Navbar() {
           <div className="hidden lg:flex cursor-pointer gap-x-2 flex-1 justify-end">
             <div
               className="text-sm border-transparent border rounded-full hover:shadow-lg px-3 py-2.5 font-semibold bg-primary text-background transition-colors duration-200">
-              <Link href={PATH_AUTH_LOGIN}>Login</Link>
+              <Link href={PATH_AUTH_LOGIN}>Giriş Yap</Link>
             </div>
 
             <div
               className="text-sm hover:border-primary hover:border-b text-primary rounded-full px-3 py-2.5 font-semibold hover:bg-secondary transition-colors duration-200">
-              <Link href={PATH_AUTH_REGISTER}>Get Early Access</Link>
+              <Link href={PATH_AUTH_REGISTER}>Aramıza Katıl</Link>
               <LucideArrowRight
                 className="inline-block ml-2"
                 size={16}
