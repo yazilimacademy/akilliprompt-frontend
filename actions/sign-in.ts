@@ -1,18 +1,12 @@
 "use server"
 
-import {signInFormSchema, SignInFormSchema} from "@/schemas/schema.user";
-import {signIn} from "@/auth";
-import {ZodError} from "zod";
-import {AuthError} from "next-auth";
+import { signInFormSchema, SignInFormSchema } from "@/schemas/schema.user";
+import { ZodError } from "zod";
+import { AuthError } from "next-auth";
 
 export default async function signInAction(formData: SignInFormSchema) {
     try {
         const parsedData = signInFormSchema.parse(formData);
-
-        await signIn("credentials", {
-            ...parsedData,
-            redirect: false,
-        });
 
         return {
             success: true,
