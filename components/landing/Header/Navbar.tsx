@@ -1,13 +1,13 @@
 'use client';
 
-import React, {useState, useEffect} from 'react';
-import {menuItems} from '@/components/landing/Header/constants';
+import React, { useState, useEffect } from 'react';
+import { menuItems } from '@/components/landing/Header/constants';
 import MobileMenu from '@/components/landing/Header/MobileMenu';
-import {CircleX, LucideArrowRight} from 'lucide-react';
-import {HamburgerMenuIcon} from '@radix-ui/react-icons';
+import { CircleX, LucideArrowRight } from 'lucide-react';
+import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
-import {cn} from '@/lib/utils';
-import {PATH_AUTH_LOGIN, PATH_AUTH_REGISTER} from '@/constants/paths';
+import { cn } from '@/lib/utils';
+import { PATH_AUTH_LOGIN, PATH_AUTH_REGISTER } from '@/constants/paths';
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -50,7 +50,7 @@ function Navbar() {
             <button>
               <div className="header-logo p-2 flex items-center space-x-2">
                 <h2 className="text-primary font-bold text-base">
-                                    Orange <span className="text-foreground">Bandit</span>
+                  Akıllı <span className="text-foreground">Prompt</span>
                 </h2>
               </div>
             </button>
@@ -97,10 +97,10 @@ function Navbar() {
             >
               {isMobileMenuOpen ? (
                 <CircleX
-                  className=" focus:outline-none"/>
+                  className=" focus:outline-none" />
               ) : (
                 <HamburgerMenuIcon
-                  className="text-slate-800 focus:outline-none"/>
+                  className="text-slate-800 focus:outline-none" />
               )}
             </button>
           </div>
@@ -110,7 +110,7 @@ function Navbar() {
       {isMobileMenuOpen && (
         <div
           className="main-nav-menu fixed inset-0 z-50 transform overflow-auto bg-transparent transition-all duration-300 lg:hidden">
-          <MobileMenu onClose={handleMobileMenuClose}/>
+          <MobileMenu onClose={handleMobileMenuClose} />
         </div>
       )}
 
