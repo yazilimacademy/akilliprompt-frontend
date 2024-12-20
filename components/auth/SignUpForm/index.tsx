@@ -8,8 +8,6 @@ import GoogleButton from '@/components/auth/GoogleButton';
 import {cn} from '@/lib/utils';
 import {Button} from '@/components/ui/button';
 import Link from 'next/link';
-import {signUpFormSchema, SignUpFormSchema} from '@/schemas/schema.user';
-import signUpAction from '@/actions/sign-up';
 import {useRouter} from 'next/navigation';
 import {useTransition} from 'react';
 import {Loader2Icon} from 'lucide-react';
