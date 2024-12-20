@@ -1,7 +1,7 @@
-import Main from "@/components/Main";
-import { auth } from "@/lib/auth";
-import { redirect } from "next/navigation";
-import { PATH_DASHBOARD } from "@/constants/paths";
+import Main from '@/components/Main';
+import { auth } from '@/lib/auth';
+import { redirect } from 'next/navigation';
+import { PATH_DASHBOARD } from '@/constants/paths';
 
 export default async function Authlayout({
   children,

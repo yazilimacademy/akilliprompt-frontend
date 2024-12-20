@@ -1,4 +1,4 @@
-import { getServerAccessToken } from "@/app/actions/auth";
+import { getServerAccessToken } from '@/app/actions/auth';
 
 export async function getServerSession() {
   const token = await getServerAccessToken();

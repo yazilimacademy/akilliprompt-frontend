@@ -1,6 +1,6 @@
 'use client';
 
-import { GoogleOAuthProvider } from "@react-oauth/google";
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import GoogleButton from '@/components/auth/GoogleButton';
 import { cn } from '@/lib/utils';
 

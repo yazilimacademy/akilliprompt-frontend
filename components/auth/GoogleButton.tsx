@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { GoogleLogin } from "@react-oauth/google";
-import { useTransition } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { useRouter } from "next/navigation";
-import { handleGoogleLogin } from "@/app/actions/auth";
+import { GoogleLogin } from '@react-oauth/google';
+import { useTransition } from 'react';
+import { useToast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { handleGoogleLogin } from '@/app/actions/auth';
 
 export default function GoogleButton() {
   const [isPending, startTransition] = useTransition();
@@ -19,19 +19,19 @@ export default function GoogleButton() {
 
       if (response.isSuccess) {
         toast({
-          title: "Başarılı",
+          title: 'Başarılı',
           description: response.message,
         });
 
-        router.push("/dashboard");
+        router.push('/dashboard');
       } else {
-        throw new Error(response.validationErrors.join(", "));
+        throw new Error(response.validationErrors.join(', '));
       }
     } catch (error) {
       toast({
-        variant: "destructive",
-        title: "Hata",
-        description: error instanceof Error ? error.message : "Giriş başarısız",
+        variant: 'destructive',
+        title: 'Hata',
+        description: error instanceof Error ? error.message : 'Giriş başarısız',
       });
     }
   };
@@ -51,9 +51,9 @@ export default function GoogleButton() {
           }}
           onError={() => {
             toast({
-              variant: "destructive",
-              title: "Hata",
-              description: "Google girişi başarısız oldu",
+              variant: 'destructive',
+              title: 'Hata',
+              description: 'Google girişi başarısız oldu',
             });
           }}
           useOneTap

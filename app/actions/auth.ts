@@ -1,7 +1,7 @@
-"use server";
+'use server';
 
-import { cookies } from "next/headers";
-import API_URL from "@/constants/ApiUrl";
+import { cookies } from 'next/headers';
+import API_URL from '@/constants/ApiUrl';
 
 interface AuthResponse {
   data: {
@@ -14,45 +14,45 @@ interface AuthResponse {
 }
 
 export async function setAuthTokens(access: string, refresh: string) {
-  cookies().set("accessToken", access, {
+  cookies().set('accessToken', access, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "strict",
-    path: "/",
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'strict',
+    path: '/',
   });
 
-  cookies().set("refreshToken", refresh, {
+  cookies().set('refreshToken', refresh, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "strict",
-    path: "/",
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'strict',
+    path: '/',
   });
 }
 
 export async function getServerAccessToken() {
-  return cookies().get("accessToken")?.value;
+  return cookies().get('accessToken')?.value;
 }
 
 export async function getServerRefreshToken() {
-  return cookies().get("refreshToken")?.value;
+  return cookies().get('refreshToken')?.value;
 }
 
 export async function clearAuthTokens() {
-  cookies().delete("accessToken");
-  cookies().delete("refreshToken");
+  cookies().delete('accessToken');
+  cookies().delete('refreshToken');
 }
 
 export async function refreshAccessToken() {
   const currentRefreshToken = await getServerRefreshToken();
   
   if (!currentRefreshToken) {
-    throw new Error("No refresh token found");
+    throw new Error('No refresh token found');
   }
 
   const response = await fetch(`${API_URL.BASE}${API_URL.AUTH.REFRESH_TOKEN}`, {
-    method: "POST",
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
       refreshToken: currentRefreshToken,
@@ -61,7 +61,7 @@ export async function refreshAccessToken() {
 
   if (!response.ok) {
     await clearAuthTokens();
-    throw new Error("Token refresh failed");
+    throw new Error('Token refresh failed');
   }
 
   const data = await response.json();
@@ -74,9 +74,9 @@ export async function handleGoogleLogin(credential: string) {
     const response = await fetch(
       `${API_URL.BASE}${API_URL.AUTH.GOOGLE_LOGIN}`,
       {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({ googleToken: credential }),
       }
@@ -90,6 +90,6 @@ export async function handleGoogleLogin(credential: string) {
 
     return data;
   } catch (error) {
-    throw new Error("Login işlemi başarısız oldu");
+    throw new Error('Login işlemi başarısız oldu');
   }
 }

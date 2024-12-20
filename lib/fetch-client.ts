@@ -6,6 +6,7 @@ interface FetchOptions extends RequestInit {
 }
 
 abstract class BaseFetchClient {
+  // eslint-disable-next-line no-unused-vars
   constructor(protected baseUrl: string) {}
 
   protected async baseFetch<T>(
