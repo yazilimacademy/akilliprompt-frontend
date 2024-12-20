@@ -4,6 +4,12 @@ const API_URL = {
     GOOGLE_LOGIN: "/Auth/google-login",
     REFRESH_TOKEN: "/Auth/refresh-token",
   },
+  CATEGORIES: "/Categories",
+  PROMPT_COMMENTS: "/PromptComments",
+  PROMPTS: {
+    BASE: "/Prompts",
+    GET_ALL: "/Prompts/get-all",
+  },
 } as const;
 
 export default API_URL;
