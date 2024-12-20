@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import { menuItems } from "@/components/landing/Header/constants";
-import MobileMenu from "@/components/landing/Header/MobileMenu";
-import { CircleX, LucideArrowRight } from "lucide-react";
-import { HamburgerMenuIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { PATH_AUTH_LOGIN } from "@/constants/paths";
+import React, { useState, useEffect } from 'react';
+import { menuItems } from '@/components/landing/Header/constants';
+import MobileMenu from '@/components/landing/Header/MobileMenu';
+import { CircleX, LucideArrowRight } from 'lucide-react';
+import { HamburgerMenuIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
+import { cn } from '@/lib/utils';
+import { PATH_AUTH_LOGIN } from '@/constants/paths';
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -23,21 +23,21 @@ function Navbar() {
 
   useEffect(() => {
     const handleEscapeKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
+      if (event.key === 'Escape') {
         setIsMobileMenuOpen(false);
       }
     };
-    document.addEventListener("keydown", handleEscapeKey);
+    document.addEventListener('keydown', handleEscapeKey);
     return () => {
-      document.removeEventListener("keydown", handleEscapeKey);
+      document.removeEventListener('keydown', handleEscapeKey);
     };
   }, []);
 
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = "";
+      document.body.style.overflow = '';
     }
   }, [isMobileMenuOpen]);
 
@@ -83,10 +83,10 @@ function Navbar() {
           <div className="flex items-center justify-center lg:hidden">
             <button
               className={cn(
-                "advanced-setting-toggle focus:outline-none transition-all duration-150",
+                'advanced-setting-toggle focus:outline-none transition-all duration-150',
                 {
-                  "rounded-full bg-slate-200 text-slate-800": isMobileMenuOpen,
-                  "text-slate-200": !isMobileMenuOpen,
+                  'rounded-full bg-slate-200 text-slate-800': isMobileMenuOpen,
+                  'text-slate-200': !isMobileMenuOpen,
                 }
               )}
               onClick={handleMobileMenuToggle}

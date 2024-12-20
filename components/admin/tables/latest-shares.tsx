@@ -1,12 +1,12 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from '@/components/ui/card';
 import {
   Table,
   TableBody,
@@ -14,42 +14,42 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
-import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+} from '@/components/ui/table';
+import { ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
 
 const shareDatas = [
   {
-    name: "Alper Tunga",
-    email: "alper.tunga@email.com",
-    likes: "500",
-    comments: "10",
-    status: "Active",
-    date: "2023-06-23",
+    name: 'Alper Tunga',
+    email: 'alper.tunga@email.com',
+    likes: '500',
+    comments: '10',
+    status: 'Active',
+    date: '2023-06-23',
   },
   {
-    name: "Merve Eksi",
-    email: "merve.eksi@email.com",
-    likes: "250",
-    comments: "5",
-    status: "Active",
-    date: "2023-06-22",
+    name: 'Merve Eksi',
+    email: 'merve.eksi@email.com',
+    likes: '250',
+    comments: '5',
+    status: 'Active',
+    date: '2023-06-22',
   },
   {
-    name: "Serkan Atmaca",
-    email: "serkan.atmaca@email.com",
-    likes: "200",
-    comments: "3",
-    status: "Active",
-    date: "2023-06-21",
+    name: 'Serkan Atmaca',
+    email: 'serkan.atmaca@email.com',
+    likes: '200',
+    comments: '3',
+    status: 'Active',
+    date: '2023-06-21',
   },
   {
-    name: "Emirhan Kara",
-    email: "emirhan.kara@email.com",
-    likes: "150",
-    comments: "2",
-    status: "Active",
-    date: "2023-06-20",
+    name: 'Emirhan Kara',
+    email: 'emirhan.kara@email.com',
+    likes: '150',
+    comments: '2',
+    status: 'Active',
+    date: '2023-06-20',
   },
 ];
 

@@ -1,10 +1,10 @@
-"use client";
-import PromptCommentSection from "@/components/prompts/edit/comments-section";
-import PromptEditSection from "@/components/prompts/edit/edit-section";
-import PromptCard from "@/components/prompts/edit/prompt-card";
-import PromptReviewSection from "@/components/prompts/edit/review-section";
-import { mockPrompts } from "@/constants/prompts";
-import { useParams } from "next/navigation";
+'use client';
+import PromptCommentSection from '@/components/prompts/edit/comments-section';
+import PromptEditSection from '@/components/prompts/edit/edit-section';
+import PromptCard from '@/components/prompts/edit/prompt-card';
+import PromptReviewSection from '@/components/prompts/edit/review-section';
+import { mockPrompts } from '@/constants/prompts';
+import { useParams } from 'next/navigation';
 
 export default function PromptEditPage() {
   const params = useParams();

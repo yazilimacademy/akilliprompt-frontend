@@ -1,7 +1,7 @@
-import Main from "@/components/Main";
-import { ThemeProvider } from "@/components/providers/theme-provider";
-import VerifyEmailNotice from "@/components/VerifyEmailNotice";
-import React from "react";
+import Main from '@/components/Main';
+import { ThemeProvider } from '@/components/providers/theme-provider';
+import VerifyEmailNotice from '@/components/VerifyEmailNotice';
+import React from 'react';
 
 export default async function PrivateLayout({
   children,

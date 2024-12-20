@@ -12,15 +12,15 @@ function Index() {
         className="hero__container max-w-5xl px-5 lg:px-10 mx-auto flex flex-col gap-y-10 items-center justify-between py-10 lg:py-24">
         <div className="hero-content flex items-center justify-center flex-col gap-y-3.5 w-full">
           <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl relative font-black max-w- md:max-w-2xl lg:max-w-3xl mx-auto text-center text-zinc-800">
-          {/* Her ihtiyacınıza uygun akıllı promptlar burada! */}
-          {/* ​Yazmaya çalıştığın prompt’un daha iyisi çoktan yazıldı. */}
+            {/* Her ihtiyacınıza uygun akıllı promptlar burada! */}
+            {/* ​Yazmaya çalıştığın prompt’un daha iyisi çoktan yazıldı. */}
           Daha iyi prompt&apos;lar,
-          <br></br>
+            <br></br>
           daha iyi sonuçlar.
           </h2>
           <p className="font-medium text-center lg:text-left max-w-xs mx-auto lg:max-w-full text-base lg:text-lg">
-          {/* ​Yazmaya çalıştığın prompt’un daha iyisi çoktan yazıldı. */}
-          {/* Her ihtiyacına uygun akıllı promptlar! */}
+            {/* ​Yazmaya çalıştığın prompt’un daha iyisi çoktan yazıldı. */}
+            {/* Her ihtiyacına uygun akıllı promptlar! */}
           En iyi prompt&apos;lar artık tek bir yerde.
           </p>
           <button

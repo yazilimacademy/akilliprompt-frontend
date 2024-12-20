@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { TrendingUp } from "lucide-react";
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
+import { TrendingUp } from 'lucide-react';
+import { Bar, BarChart, CartesianGrid, XAxis } from 'recharts';
 
 import {
   Card,
@@ -10,26 +10,26 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from '@/components/ui/card';
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/chart";
+} from '@/components/ui/chart';
 const chartData = [
-  { month: "January", shares: 186 },
-  { month: "February", shares: 305 },
-  { month: "March", shares: 237 },
-  { month: "April", shares: 73 },
-  { month: "May", shares: 209 },
-  { month: "June", shares: 214 },
+  { month: 'January', shares: 186 },
+  { month: 'February', shares: 305 },
+  { month: 'March', shares: 237 },
+  { month: 'April', shares: 73 },
+  { month: 'May', shares: 209 },
+  { month: 'June', shares: 214 },
 ];
 
 const chartConfig = {
   shares: {
-    label: "Shares",
-    color: "hsl(var(--chart-1))",
+    label: 'Shares',
+    color: 'hsl(var(--chart-1))',
   },
 } satisfies ChartConfig;
 
