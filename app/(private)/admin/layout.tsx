@@ -19,15 +19,13 @@ export default async function PrivateLayout({
   }
 
   return (
-    <>
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="light"
-        enableSystem
-        disableTransitionOnChange
-      >
-        <Main>{children}</Main>
-      </ThemeProvider>
-    </>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="light"
+      enableSystem
+      disableTransitionOnChange
+    >
+      <Main>{children}</Main>
+    </ThemeProvider>
   );
 }
